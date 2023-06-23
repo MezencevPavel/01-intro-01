@@ -1,2 +1,1 @@
-# 01-intro-01
-Домашнее задание к занятию «Введение в DevOps»
+# Netology homework
