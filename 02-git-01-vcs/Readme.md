@@ -1,2 +1,2 @@
 Readme file for second lesson
-Redacted
+все файлы которые находятся в директории .gitignore не могут попасть в статус Staged. При команде git add выпадает сообщение Permission denied что означает что "нет прав на выполнение операции".  
