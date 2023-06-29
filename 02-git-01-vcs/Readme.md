@@ -2,28 +2,28 @@ Readme
 Файл .gitignore позволяет добавлять исключения, файлы добавленные туда не будут индексированы (git add)
 
 будут игнороироваться все файлы в .terraform директории
-**/.terraform/* -
+(**/.terraform/* -)
 
 Будут игнорироваться все файлы .tfstate
-*.tfstate
-*.tfstate.*
+(*.tfstate)
+(*.tfstate.*)
 
 Будут игнорироваться краш логи
-crash.log
-crash.*.log
+(crash.log)
+(crash.*.log)
 
 Будут игнорироваться все файлы .tfvars которые могут содержать конфеденциальные данные (ключи, пароли и т.д.)
-*.tfvars
-*.tfvars.json
+(*.tfvars)
+(*.tfvars.json)
 
 Будут игнорироваться файлы предопределения которые обычно используются локально
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
+(override.tf)
+(override.tf.json)
+(*_override.tf)
+(*_override.tf.json)
 
 Будут игнорироваться файалы файлы конфигурации CLI
-.terraformrc
-terraform.rc
+(.terraformrc)
+(terraform.rc)
 
 
