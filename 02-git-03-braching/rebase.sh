@@ -3,7 +3,7 @@
 
 count=1
 for param in "$@"; do
-    echo "New Parameter: $param"
+    echo "Parameter: $param"
     count=$(( $count + 1 ))
 done
 
