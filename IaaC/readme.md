@@ -25,3 +25,7 @@
     Ansible.
 ### Ответ 3
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/IaaC/img/programm%20PS.png)
+## Задача 4
+Воспроизведите практическую часть лекции самостоятельно.
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/IaaC/img/Task%204.1.png)
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/IaaC/img/Task%204.2.png)
