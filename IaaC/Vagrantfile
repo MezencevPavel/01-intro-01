@@ -4,7 +4,7 @@ ISO = "bento/ubuntu-20.04"
 NET = "192.168.56."
 DOMAIN = ".netology"
 HOST_PREFIX = "server"
-INVENTORY_PATH = "../ansible/inventory"
+INVENTORY_PATH = "../IaaC/inventory/"
 
 servers = [
   {
@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/vagrant", disabled: false
   servers.each do |machine|
     config.vm.define machine[:hostname] do |node|
-      node.vm.box = ISO
+      node.vm.box = "ISO"
       node.vm.hostname = machine[:hostname]
       node.vm.network "private_network", ip: machine[:ip]
       node.vm.network :forwarded_port, guest: machine[:ssh_vm], host: machine[:ssh_host]
@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
       end
       node.vm.provision "ansible" do |setup|
         setup.inventory_path = INVENTORY_PATH
-        setup.playbook = "../ansible/provision.yml"
+        setup.playbook = "../IaaC/provision.yml"
         setup.become = true
         setup.extra_vars = { ansible_user: 'vagrant' }
       end
