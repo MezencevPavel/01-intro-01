@@ -4,17 +4,17 @@
 
 Чтобы получить зачёт, вам нужно предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
 ##Ответ 1
-https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z1.jpg?raw=true
+[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z1.jpg?raw=true)
 ##Задача 2
 Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud
 ##Ответ 2
-https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z2.jpg?raw=true
+[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z2.jpg?raw=true)
 ##Задача 3
 С помощью Ansible и Docker Compose разверните на виртуальной машине из предыдущего задания систему мониторинга на основе Prometheus/Grafana. Используйте Ansible-код в директории (src/ansible).
 
 Чтобы получить зачёт, вам нужно предоставить вывод команды "docker ps" , все контейнеры, описанные в docker-compose, должны быть в статусе "Up".
 ##Ответ 3
-https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z3.jpg?raw=true
+[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z3.jpg?raw=true)
 ##Задача 4
 Откройте веб-браузер, зайдите на страницу http://<внешний_ip_адрес_вашей_ВМ>:3000.
 Используйте для авторизации логин и пароль из .env-file.
@@ -24,4 +24,4 @@ https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z3.jpg?raw
 
 скриншот работающего веб-интерфейса Grafana с текущими метриками, как на примере ниже.
 ##Ответ 4
-https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z4.jpg?raw=true
+[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/virtual/05-z4.jpg?raw=true)
