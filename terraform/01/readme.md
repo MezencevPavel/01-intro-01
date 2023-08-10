@@ -22,12 +22,12 @@
 Error: Invalid resource name - ошибка в имени ресурса. Имя ресурса должно начинаться с буквы или подчеркивания, но в нашем случае начинается с цифры "1nginx". Исправляем на "nginx"
 Error: Reference to undeclared resource - Ссылка на необъявленный ресурс. ошибка была в name  = "example_${random_password.random_string_FAKE.resulT}" где в result есть заглавная буква. Так же _FAKE неверной синтаксической конструкции
 image = docker_image.nginx.image_id - нужно поменять nginx на my_dockimage, чтобы соответствовать объявленному именованию ресурса.
-5. ![markdown img]()
+5. ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/01/img/Docker%20ps.jpg)
 6. -auto-approve это автоматически утвердить план изменений без запроса подтверждения пользователя
 Эта команда опасна тем что нежелательные изменения могут быть незамеченны
-![markdown img]()
-7. ![markdown img]()
-8. ![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/01/img/4.1%20hello-world.png)
+7. ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/01/img/destroy.png)
+8. ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/01/img/final.jpg)
 
 ### Задание 2*
 
