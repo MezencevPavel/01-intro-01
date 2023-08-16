@@ -28,9 +28,9 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 В качестве решения приложите:
 
 - скриншот ЛК Yandex Cloud с созданной ВМ;
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%201.jpg)
 - скриншот успешного подключения к консоли ВМ через ssh. К OS ubuntu необходимо подключаться под пользователем ubuntu: "ssh ubuntu@vm_ip_address";
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%202.png)
 - ответы на вопросы. **указаны выше**
 
 
@@ -41,7 +41,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 **Изменений нет**
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%203.png)
 
 ### Задание 3
 
@@ -49,7 +49,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  cores  = 2, memory = 2, core_fraction = 20. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').
 3. Примените изменения.
 
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%204.png)
 
 ### Задание 4
 
@@ -58,7 +58,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%205.png)
 
 ### Задание 5
 
@@ -66,6 +66,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local-переменные.
 3. Примените изменения.
 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%206.png)
 
 ### Задание 6
 
@@ -73,3 +74,6 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 2. Также поступите с блоком **metadata {serial-port-enable, ssh-keys}**, эта переменная должна быть общая для всех ваших ВМ.
 3. Найдите и удалите все более не используемые переменные проекта.
 4. Проверьте terraform plan. Изменений быть не должно.
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/02/img/4.2%207.png)
+
+**Домашнее задание terraform 02 готово**
