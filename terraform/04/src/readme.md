@@ -46,4 +46,4 @@ https://github.com/MezencevPavel/devops-netology/blob/main/terraform/04/src/doc.
 4. Импортируйте всё обратно. Проверьте terraform plan. Изменений быть не должно.
 Приложите список выполненных команд и скриншоты процессы.
 
-[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/04/img/04%207.png)
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/04/img/04%207.png)
