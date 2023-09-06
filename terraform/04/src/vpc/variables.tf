@@ -1,18 +1,15 @@
 ###cloud vars
 variable "token" {
   type        = string
-  default     = "y0_AgAAAAABLbClAATuwQAAAADn3e8d0GrS61A_T6-28_5MUiu26-FVkdE"
   description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
 }
 
 variable "cloud_id" {
   type        = string
-  default     = "b1g6ms8dq7ksv1c90h72"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/cloud/get-id"
 }
 
 variable "folder_id" {
-  default     = "b1gs1llod3ucp43k3e79"
   type        = string
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
@@ -70,6 +67,3 @@ variable "labels" {
   description = "Labels to mark resources."
   default     = {}
 }
-
-
-
