@@ -1,0 +1,22 @@
+version: '3'
+services:
+  centos7:
+    image: centos:centos8
+    container_name: centos8
+    restart: unless-stopped
+    entrypoint: "sleep infinity"
+    networks: 
+       - mynetwork
+
+  ubuntu:
+    image: ubuntu:22.04
+    container_name: ubuntu2204
+    restart: unless-stopped
+    entrypoint: "sleep infinity"
+    networks: 
+      - mynetwork
+
+
+networks:
+  mynetwork:
+    driver: bridge
