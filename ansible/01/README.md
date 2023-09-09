@@ -37,7 +37,7 @@
 
 **корректные значения для всех хостов получены**
 
-![markdown img](![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/ansible/01/img/01%205.png))
+(![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/ansible/01/img/01%205.png))
 
 7. При помощи `ansible-vault` зашифруйте факты в `group_vars/deb` и `group_vars/el` с паролем `netology`.
 
