@@ -21,12 +21,12 @@
 2. Вы должны передать в модуль переменные с названием сети, zone и v4_cidr_blocks.
 3. Модуль должен возвращать в root module с помощью output информацию о yandex_vpc_subnet. Пришлите скриншот информации из terraform console о своем модуле. Пример: > module.vpc_dev  
 
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/04/img/04%202.png)
+![markdown img]()
 
 4. Замените ресурсы yandex_vpc_network и yandex_vpc_subnet созданным модулем. Не забудьте передать необходимые параметры сети из модуля vpc в модуль с виртуальной машиной.
 5. Откройте terraform console и предоставьте скриншот содержимого модуля. Пример: > module.vpc_dev.
 
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/terraform/04/img/04%203.png)
+![markdown img]()
 
 6. Сгенерируйте документацию к модулю с помощью terraform-docs.    
 
