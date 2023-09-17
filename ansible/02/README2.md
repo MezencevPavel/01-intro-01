@@ -70,7 +70,7 @@ Site.yml - Playbook для хоста centos-clickhouse
         state: restarted
 ```
 
-4. в последюю очередь выполняется задача для создания базы данных
+4. в последюю очередь выполняется задача для создания базы данных  
 С помощью модуля **meta: flush_handlers** она выполняется выполняется после модуля **handlers**
 
 ```
@@ -82,7 +82,7 @@ Site.yml - Playbook для хоста centos-clickhouse
 ```
 
 
-Мной был сделан отдельный Playbook site2.yml для хоста **centos-vector**
+## Мной был сделан отдельный Playbook site2.yml для хоста **centos-vector**
 
 1. скачивание файлов rpm по url протоколу
 
@@ -155,6 +155,6 @@ vector:
 
 ## 3. group_vars/vector & clickhouse
 
-в group_vars указаны переменные используемые в Site.yml и в Site2.yml, а данном случае это версии
-clickhouse - "22.3.3.44"
-vector - "latest"
+в group_vars указаны переменные используемые в Site.yml и в Site2.yml, а данном случае это версии  
+clickhouse - "22.3.3.44"  
+vector - "latest"  
