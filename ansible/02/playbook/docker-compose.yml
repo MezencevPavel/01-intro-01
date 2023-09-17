@@ -1,0 +1,22 @@
+version: '3'
+services:
+  centos7-clickhouse:
+    image: centos:centos7
+    container_name: centos-clickhouse
+    restart: unless-stopped
+    entrypoint: "sleep infinity"
+    networks: 
+       - mynetwork
+
+  centos7-vector:
+    image: centos:centos7
+    container_name: centos-vector
+    restart: unless-stopped
+    entrypoint: "sleep infinity"
+    networks: 
+      - mynetwork
+
+
+networks:
+  mynetwork:
+    driver: bridge
