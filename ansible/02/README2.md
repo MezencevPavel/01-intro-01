@@ -1,4 +1,4 @@
-### Описание **playbook**
+# Описание **playbook**
 
 
 ## подготовка к работе
@@ -82,7 +82,7 @@ Site.yml - Playbook для хоста centos-clickhouse
 ```
 
 
-## Мной был сделан отдельный Playbook site2.yml для хоста **centos-vector**
+### Мной был сделан отдельный Playbook site2.yml для хоста **centos-vector**
 
 1. скачивание файлов rpm по url протоколу
 
