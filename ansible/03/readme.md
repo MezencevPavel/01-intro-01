@@ -1,6 +1,6 @@
 # Описание Playbook
-В yandex-cloud развёрнуты 3 виртуальные машины. 
-они указаны в файлае инвентаря inventory/prod.yml (ссылка) 
+В yandex-cloud развёрнуты 3 виртуальные машины.  
+они указаны в файлае инвентаря inventory/prod.yml  
 
 ```
 clickhouse:
@@ -16,12 +16,12 @@ lighthouse:
     centos-lighthouse:
       ansible_host: 158.160.35.248
 ```
-Playbook разделён на 4 части. 
+Playbook разделён на 4 части.  
  
-**clic.yml** - предназначен для установки clickhouse на ВМ centos-clickhouse 
-**vector.yml** - предназначен для установки vector на ВМ centos-vector 
-**nginx.yml** - предназначена для установки nginx на ВМ centos-lighthouse 
-**light.yml** - предназначена для установки lighthouse на ВМ centos-lighthouse 
+**clic.yml** - предназначен для установки clickhouse на ВМ centos-clickhouse  
+**vector.yml** - предназначен для установки vector на ВМ centos-vector  
+**nginx.yml** - предназначена для установки nginx на ВМ centos-lighthouse   
+**light.yml** - предназначена для установки lighthouse на ВМ centos-lighthouse   
 
 
 ## Структура 
@@ -47,9 +47,9 @@ Playbook разделён на 4 части.
 
 ## Параметры
 
-в директории **template** находятся шаблоны конфигурации для Vector, nginx и lighthouse. 
-в директории **invetory** находятится перечни хостов
-в диркектории **group_vars** находятся переменные хостов для работы playbook
+в директории **template** находятся шаблоны конфигурации для Vector, nginx и lighthouse.  
+в директории **invetory** находятится перечни хостов  
+в диркектории **group_vars** находятся переменные хостов для работы playbook  
 
 
 ### Результат выполнения playbook clic.yml

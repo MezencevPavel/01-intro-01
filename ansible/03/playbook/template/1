@@ -1,0 +1,90 @@
+user {{ pavel }};
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+- name: Install Vector
+  hosts: centos-vector
+  handlers:
+    - name: Start vector service
+      become: true
+      ansible.builtin.service:
+        name: vector
+        state: started
+  tasks:
+    - name: Get package vector
+      ansible.builtin.get_url:
+        url: https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm
+        dest: ./vector-{{ vector_version }}-1.x86_64.rpm
+    - name: Install vector package
+      become: true
+      ansible.builtin.yum:
+        name: vector-latest-1.x86_64.rpm
+      notify: Start vector service
+    - name: mkdir vector
+      ansible.builtin.file:
+        path: /etc/vector
+        state: directory
+        mode: "0755"
+    - name: copy config
+      become: true
+      ansible.builtin.template:
+        src: ./template/vector.conf.j2
+        dest: /etc/vector/vector.conf
+        mode: "0755"
+      notify: Start vector service
+  tags:
+    - Vector
+
+ handlers:
+    - name: reload-nginx
+      become: true
+      ansible.builtin.service:
+        name: vector
+        command: nginx -s reload
+  pre_tasks:
+    - name: lighthouse | install dependencies
+      become: true
+      ansible.builtin.yum:
+        name: git
+        state: present
+  tasks:
+    - name: lighthouse | copy from git
+      git:
+        repo: "{{ lighthouse_vcs }}"
+        version: master
+        dest: "{{ lighthouse_location_dir }}"
+    - name: lighthouse | create lighthouse config
+      become: true
+      template:
+        scr: lighthouse.conf.j2
+        dest: /etc/nginx/conf.d/default.conf
+        mode: 0644
+      notify: reload-nginx
+  tags:
+    - lighthouse
