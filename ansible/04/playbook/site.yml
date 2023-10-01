@@ -1,0 +1,18 @@
+---
+- name: clickhouse
+  hosts: centos-clickhouse
+  roles:
+    - clickhouse-role
+
+- name: vector
+  hosts: centos-vector
+  roles:
+    - vector-role
+  tags:
+    - vector
+- name: centos-lighthouse
+  hosts: lighthouse
+  roles:
+    - lighthouse-role
+  tags:
+    - lighthouse
