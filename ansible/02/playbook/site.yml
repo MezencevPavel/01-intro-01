@@ -1,12 +1,6 @@
 ---
 - name: Install Clickhouse
   hosts: centos-clickhouse
-  handlers:
-    - name: Start clickhouse service
-      become: true
-      ansible.builtin.service:
-        name: clickhouse-server
-        state: restarted
   tasks:
     - block:
         - name: Get clickhouse distrib
@@ -28,10 +22,17 @@
           - clickhouse-server-22.3.3.44.noarch.rpm
         installroot: /
       notify: Start clickhouse service
-    - name: Flush handlers
-      meta: flush_handlers
+
+- name: Install Clickhouse
+  hosts: centos-clickhouse
+  tasks:
+    - name: Restart clickhouse-server
+      ansible.builtin.service:
+        name: clickhouse-server
+        state: restarted
+
     - name: Create database
-      ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
+      command: "clickhouse-client -q 'create database logs;'"
       register: create_db
-      failed_when: create_db.rc != 0 and create_db.rc !=82
+      failed_when: create_db.rc != 0 and create_db.rc != 82
       changed_when: create_db.rc == 0

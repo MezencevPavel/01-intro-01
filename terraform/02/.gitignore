@@ -1,0 +1,3 @@
+#игнорирование файла с персональными настройками
+personal.auto.tfvars
+terraform.tfstate.backup

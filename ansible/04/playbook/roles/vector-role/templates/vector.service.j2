@@ -1,0 +1,7 @@
+[Unit]
+Description=Vector service
+[Service]
+User={{ ansible_user_id }}
+Group={{ ansible_user_gid }}
+ExecStart=/usr/local/bin/vector --config-yaml {{ vector_config_dir }}/vector.yaml --watch-config
+Restart=always

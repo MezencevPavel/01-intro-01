@@ -1,0 +1,6 @@
+---
+vector_version: "latest"
+vector_dir: "/etc/vector"
+vector_data_dir: "/var/lib/vector"
+vector_user: "pavel"
+vector_group: "pavel"
