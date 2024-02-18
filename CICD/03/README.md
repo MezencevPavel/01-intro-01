@@ -11,7 +11,7 @@
 7.  Проверьте готовность Nexus через [бразуер](http://localhost:8081).
 8. Подключитесь под admin\admin123, поменяйте пароль, сохраните анонимный доступ.
 
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/03/png/CICD%201.png?raw=true)
 
 ## Знакомоство с SonarQube
 
@@ -29,7 +29,7 @@
 
 ## Решение
 
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/03/png/CICD%202.png?raw=true)
 
 ## Знакомство с Nexus
 
@@ -49,7 +49,7 @@
 
 ## Решение
 
-[maven-metadata.xml](http://localhost:9000)
+[maven-metadata.xml](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/03/maven-metadata.xml)
 
 ### Знакомство с Maven
 
@@ -70,7 +70,7 @@
 
 ## Решение
 
-[pom.xml](http://localhost:9000)
+[pom.xml](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/03/mvn/pom.xml)
 
 ---
 
