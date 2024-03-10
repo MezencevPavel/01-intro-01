@@ -1,0 +1,5 @@
+---
+- name: Пример использования роли Nginx
+  hosts: localhost
+  roles:
+    - nginx
