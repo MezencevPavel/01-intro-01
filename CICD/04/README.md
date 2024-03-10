@@ -16,8 +16,8 @@
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/4.png?raw=true) 4
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/5.png?raw=true) 5
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/6.png?raw=true) 6
-![markdown img]() 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/6.png?raw=true)
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/07.png?raw=true) 
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
 
 ссылка на Declarative Pipeline - https://github.com/staratel74/ansible-role/blob/main/vector-role/Jenkinsfile
@@ -33,8 +33,8 @@
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 
 * ссылка на роль vector-role - https://github.com/MezencevPavel/vector_role
-* ссылка на Declarative Pipeline - 
-* ссылка на Scripted Pipeline - 
+* ссылка на Declarative Pipeline - https://github.com/MezencevPavel/vector_role/blob/main/jenkinsfile
+* ссылка на Scripted Pipeline - https://github.com/MezencevPavel/vector_role/blob/main/scriptedJenkinsfile
 
 ## Необязательная часть
 
