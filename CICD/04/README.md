@@ -4,19 +4,19 @@
 
 1. Создать два VM: для jenkins-master и jenkins-agent.
 2. Установить Jenkins при помощи playbook.
-![markdown img]() 1
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/01.png?raw=true) 1
 3. Запустить и проверить работоспособность.
 4. Сделать первоначальную настройку.
-![markdown img]() 2
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/02.png?raw=true) 2
 
 ## Основная часть
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
-![markdown img]() 3
-![markdown img]() 4
-![markdown img]() 5
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/3.png?raw=true) 3
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/4.png?raw=true) 4
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/5.png?raw=true) 5
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
-![markdown img]() 6
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/CICD/04/PNG/6.png?raw=true) 6
 ![markdown img]() 
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
 
@@ -32,7 +32,7 @@
 
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 
-* ссылка на роль vector-role - 
+* ссылка на роль vector-role - https://github.com/MezencevPavel/vector_role
 * ссылка на Declarative Pipeline - 
 * ссылка на Scripted Pipeline - 
 
