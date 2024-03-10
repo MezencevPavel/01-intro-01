@@ -4,20 +4,37 @@
 
 1. Создать два VM: для jenkins-master и jenkins-agent.
 2. Установить Jenkins при помощи playbook.
+![markdown img]() 1
 3. Запустить и проверить работоспособность.
 4. Сделать первоначальную настройку.
+![markdown img]() 2
 
 ## Основная часть
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+![markdown img]() 3
+![markdown img]() 4
+![markdown img]() 5
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+![markdown img]() 6
+![markdown img]() 
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
+
+ссылка на Declarative Pipeline - https://github.com/staratel74/ansible-role/blob/main/vector-role/Jenkinsfile
+
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
+
+* внести запись на агенте в /etc/sudoers jenkins  ALL=(ALL) NOPASSWD:ALL что бы не запрашивался пароль при sudo
+* на агенте mkdir /opt/jdk && ln -s /usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.el7_9.x86_64 /opt/jdk/openjdk-11
+
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
-9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
+
+* ссылка на роль vector-role - 
+* ссылка на Declarative Pipeline - 
+* ссылка на Scripted Pipeline - 
 
 ## Необязательная часть
 
