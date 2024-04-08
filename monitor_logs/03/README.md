@@ -17,9 +17,7 @@
 
 Используйте output stdout filebeat/kibana и api elasticsearch для изучения корня проблемы и её устранения.
 
-## Задание повышенной сложности
-
-Не используйте директорию [help](./help) при выполнении домашнего задания.
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/monitor_logs/03/png/01.png)
 
 ## Задание 1
 
@@ -44,6 +42,8 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/monitor_logs/03/png/02.png)
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
@@ -52,6 +52,10 @@ Filebeat следует сконфигурировать для отправки
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
+
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/monitor_logs/03/png/03.png)
+
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/monitor_logs/03/png/04.png)
  
 ---
 
