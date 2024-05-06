@@ -81,7 +81,7 @@
 
 
 ### Решение
-![markdown img]()
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/01/png/01.png?raw=true)
 ------
 
 ### Критерии оценки
