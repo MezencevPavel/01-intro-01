@@ -47,18 +47,18 @@
 
 ### Решение 1. Создать Pod с именем hello-world
 
-1-2. Создан манифест [pod.yml](url), в нём мы видим **image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2**  
+1-2. Создан манифест [pod.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/02/pod.yml), в нём мы видим **image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2**  
 3. создаю pod hello-world командой **microk8s kubectl apply -f /home/pavel/.kube/pod.yml**  
 4. с помощью команды port-forward прокинул порт  
  **microk8s kubectl port-forward -n default pod/hello-world 10443:443**   
 5. результат команды **curl**   
-![markdown img](ссылка) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/02/png/01.png?raw=true) 
 
 ### Решение 1. Создать Service и подключить его к Pod
 
-1-2.  создан манифест [service.yml](url), в нём мы видим **image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2**  
+1-2.  создан манифест [service.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/02/service.yml), в нём мы видим **image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2**  
 3. создаю pod и services командой **microk8s kubectl apply -f /home/pavel/.kube/service.yml**   
 4. с помощью команды port-forward прокинул порт 
 **microk8s kubectl port-forward -n default pod/hello-world 8080:8080**  
 5. резулрезультат команды **curl**   
-![markdown img](ссылка)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/02/png/02.png?raw=true)  
