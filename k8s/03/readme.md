@@ -44,13 +44,13 @@
 ### Решение 1. Создать Deployment и обеспечить доступ к репликам приложения из другого Pod
 
 1. Создаю новый namespace **netology**
-2. запускаю  [deployment.yml]()  
+2. запускаю  [deployment.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/deployment.yml)  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/png/01.png)  
 3.  После увелеченил количество реплик до двух.  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/png/02.png)  
-4.  Далее запускаю [service.yml]()  
+4.  Далее запускаю [service.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/service.yml)  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/png/03.png)  
-5.  отдельный pod [multitool.yml]()
+5.  отдельный pod [multitool.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/multitool.yml)
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/png/04.png)  
 
 
@@ -58,7 +58,7 @@
 
 ### Решение 2. Создать Deployment и обеспечить старт основного контейнера при выполнении условий
 
-1.  файл [deployment2.yml]() для старта контейнера
-2.  файл [nginx-init-svc.yml]() для создания сервиса
+1.  файл [deployment2.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/deployment2.yml) для старта контейнера
+2.  файл [nginx-init-svc.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/nginx-init-svc.yml) для создания сервиса
 3.  ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/03/png/05.png) видим что pod nginx-init-deploy-786df4c9fc-77psq запущен  
  
