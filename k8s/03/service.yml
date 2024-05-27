@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-multitool-svc
+  namespace: netology
+spec:
+  selector:
+    app: nmt
+  ports:
+    - protocol: TCP
+      name: nginx
+      port: 80
+      targetPort: 80    
+    - protocol: TCP
+      name: multitool
+      port: 8080
+      targetPort: 1180
