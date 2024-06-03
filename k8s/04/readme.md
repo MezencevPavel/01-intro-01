@@ -43,16 +43,16 @@
 ### Решение 1. Создать Deployment и обеспечить доступ к контейнерам приложения по разным портам из другого Pod внутри кластера  
 
 1. Создаю **namespace** : hw4 (homework 4)  
-2. kubectl apply -f [deployment.yml]() 
-![markdown img](01.png)   
-3. пишу манифест [service.yml]() для доступа внутрь кластера  
-![markdown img](02.png)
-4. пишу манифест отдельный [multitool.yml]()  
-![markdown img](03.png)  
+2. kubectl apply -f [deployment.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/deployment.yaml) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/01.png?raw=true)   
+3. пишу манифест [service.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/service.yaml) для доступа внутрь кластера  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/02.png?raw=true)
+4. пишу манифест отдельный [multitool.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/multitool.yaml)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/03.png?raw=true)  
 проверяю доступ  
-![markdown img](04.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/04.png?raw=true) 
 5. проверю доступность подов по доменному имени сервиса  
-![markdown img](05.png)
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/05.png?raw=true)
 
 ------
 
