@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-ingress
+  namespace: hw5
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: myingress.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontback-service
+            port:
+              number: 9001
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: frontback-service
+            port:
+              number: 9002

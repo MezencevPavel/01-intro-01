@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: hw5
+  labels:
+    app: front
+spec:
+  selector:
+    matchLabels:
+      app: front
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: front
+        component: network2
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.4
+        ports:
+        - containerPort: 80
