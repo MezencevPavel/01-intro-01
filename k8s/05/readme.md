@@ -68,4 +68,4 @@
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/07.png?raw=true)  
 4. Проверяю доступ к приложениям через get **microk8s kubectl get ingress -n hw5**  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/09.png?raw=true) 
-5. ![markdown img]()
+5. ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/11.png?raw=true)  
