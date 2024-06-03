@@ -58,10 +58,11 @@
 
 ### Решение 2. Создать Service и обеспечить доступ к приложениям снаружи кластера  
 
-
-
-
-
+1. Создаю отдельный [Service](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/service-nodeport.yml)   
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/06.png?raw=true)  
+c внешними портами **30007** и **30008**   
+2. С помощью curl проверю, доступны ли приложения из подов по внешним портам:  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/07.png?raw=true)  
 
 
 ------
