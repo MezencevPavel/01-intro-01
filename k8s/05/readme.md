@@ -52,7 +52,7 @@
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/03.png?raw=true) 
 4. Манифест [service](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/yml/service.yaml)  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/05.png?raw=true)  
-5. проверяю из пода **backend** доступ
+5. проверяю из пода **backend** доступ  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/06.png?raw=true)  
 
 ------
@@ -68,3 +68,4 @@
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/07.png?raw=true)  
 4. Проверяю доступ к приложениям через get **microk8s kubectl get ingress -n hw5**  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/09.png?raw=true) 
+5. ![markdown img]()
