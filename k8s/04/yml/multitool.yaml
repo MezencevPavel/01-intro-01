@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: multitool
+   namespace: hw4
+spec:
+   containers:
+     - name: multitool
+       image: dockerhub.timeweb.cloud/wbitt/network-multitool
+       ports:
+        - containerPort: 8080
