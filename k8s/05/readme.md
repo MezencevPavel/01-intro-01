@@ -45,15 +45,15 @@
 ### Решение 1. Создать Deployment приложений backend и frontend
 
 1. Создал отдельный Namespace hw5 (homework 5) 
-2. Манифест [deploy_front]()  
-![markdown img](01)  
-3. Манифест [deploy_back]()  
-![markdown img](02) 
-![markdown img](03) 
-4. Манифест [service]()  
-![markdown img](05)  
+2. Манифест [deploy_front](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/yml/deploy_front.yaml)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/01.png?raw=true)  
+3. Манифест [deploy_back](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/yml/deploy_back.yaml)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/02.png?raw=true) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/03.png?raw=true) 
+4. Манифест [service](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/yml/service.yaml)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/05.png?raw=true)  
 5. проверяю из пода **backend** доступ
-![markdown img](06)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/06.png?raw=true)  
 
 ------
 
@@ -61,6 +61,10 @@
 
 ------
 
-1. 
-2. 
-3. 
+1. Включаю ingress.enable  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/08.png?raw=true)  
+2. пишу манифест [ingress](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/yml/ingress.yaml)  
+3. применяю манифест  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/07.png?raw=true)  
+4. Проверяю доступ к приложениям через get **microk8s kubectl get ingress -n hw5**  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/05/png/09.png?raw=true) 
