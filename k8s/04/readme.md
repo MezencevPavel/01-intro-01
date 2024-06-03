@@ -43,7 +43,7 @@
 ### Решение 1. Создать Deployment и обеспечить доступ к контейнерам приложения по разным портам из другого Pod внутри кластера  
 
 1. Создаю **namespace** : hw4 (homework 4)  
-2. kubectl apply -f [deployment.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/deployment.yaml) 
+2. kubectl apply -f [deployment.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/deployment.yaml)  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/01.png?raw=true)   
 3. пишу манифест [service.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/yml/service.yaml) для доступа внутрь кластера  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/04/png/02.png?raw=true)
