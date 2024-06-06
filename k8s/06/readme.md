@@ -52,22 +52,22 @@
 ### Задание 1 
 
 1. создан **namespace hw6**  
-2. apply -f [deploy-empty.yml]()  
+2. apply -f [deploy-empty.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/yml/deploy-empty.yml)  
 3. проверяю статус POD'a  
-![markdown img](01)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/png/01.png?raw=true)  
 4. проверяю приложение **multitool**  
-![markdown img](02)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/png/02.png?raw=true)  
 5. проверяю приложение **busybox**  
-![markdown img](03)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/png/03.png?raw=true)  
 мы видим что в файле success.txt есть информация доступная для обоих контейнеров
 
 ------
 
 ### Задание 2 
 
-1. apply -f [deamonset.yml]()  
+1. apply -f [deamonset.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/yml/deamonset.yml)  
 2. проверяю статус POD'a  
-![markdown img](04)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/png/04.png?raw=true)  
 3. захожу в POD и проверяю файл syslog. мы видим что доступ к файлу есть.  
-![markdown img](05)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/06/png/05.png?raw=true)  
 ------
