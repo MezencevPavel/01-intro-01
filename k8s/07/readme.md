@@ -54,14 +54,14 @@
 
 ### Решение 1
 
-1. пишу [deployment.yml]() и применяю его.  
-![markdown img](01.png)  
-2. пишу [pvc.yml]() и [pv.yml]() и применяю их.  
-![markdown img](02.png)  
+1. пишу [deployment.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/deploy.yml) и применяю его.  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/01.png)  
+2. пишу [pvc.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/pvc.yml) и [pv.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/pv.yml) и применяю их.  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/02.png)  
 3. после проверки подов, вижу что они в статусе **running**  
-![markdown img](03.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/03.png)  
 4. после команды logs к поду, я вижу что multitool работает и есть доступ.  
-![markdown img](04.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/04.png)  
 
 
 ------
@@ -70,15 +70,14 @@
  
 1. для подключения NFS требуется подключить **community** командой **microk8s enable community**
 2. далее подключаю addon NFS  
-![markdown img](05.png)  
-3. пишу манифест [deploy_ngs.yml]() и применяю его, так же проверяю его статус и создан ли **PV**  
-![markdown img](06.png)  
-4. пишу манифест [pvc_nfs.yml]() и применяю его. 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/05.png)  
+3. пишу манифест [deploy_ngs.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/deploy_nfs.yml) и применяю его, так же проверяю его статус и создан ли **PV**  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/06.png)  
+4. пишу манифест [pvc_nfs.yml](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/pvc_nfs.yml) и применяю его. 
 5. проверяю статус пода  
-![markdown img](07.png) 
-  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/07.png) 
 вижу что он в статусе **running**  
 6. так же проверил статус записи  
-![markdown img](08.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/07/PNG/08.png) 
 
 ------
