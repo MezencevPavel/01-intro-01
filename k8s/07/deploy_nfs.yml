@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mtool
+  namespace: hw7
+  labels:
+    app: mtool
+spec:
+  selector:
+    matchLabels:
+      app: mtool
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mtool
+    spec:
+      containers:
+      - name: multitool
+        image: dockerhub.timeweb.cloud/wbitt/network-multitool
+        ports:
+        - containerPort: 8080
+        env: 
+          - name: HTTP_PORT
+            value: "1180"
+        volumeMounts:
+        - name: nfs-storage
+          mountPath: "/data"
+      volumes:
+      - name: nfs-storage
+        persistentVolumeClaim:
+          claimName: nfs-pvc

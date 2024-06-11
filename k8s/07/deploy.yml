@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: volumes-test2
+  namespace: hw7
+spec:
+  selector:
+    matchLabels:
+      app: app_hw
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app_hw
+    spec:
+      nodeSelector:
+         kubernetes.io/hostname: k8s
+      containers:
+      - name: busybox
+        image: dockerhub.timeweb.cloud/busybox:1.28
+        command: ['sh', '-c', 'mkdir -p /out/logs && while true; do echo "$(date) - Test message" >> /out/logs/success.txt; sleep 5; done']
+        volumeMounts:
+        - name: volume
+          mountPath: /out/logs
+      - name: multitool
+        image: dockerhub.timeweb.cloud/wbitt/network-multitool
+        command: ['sh', '-c', 'tail -f /out/logs/success.txt']
+        volumeMounts:
+        - name: volume
+          mountPath: /out/logs
+      volumes:
+      - name: volume
+        persistentVolumeClaim:
+          claimName: pvc-vol
