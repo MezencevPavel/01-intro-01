@@ -36,28 +36,28 @@
 
 ### Решение 1. 
   
-1. Пишу и применяю [Deployment]() приложения  
-![markdown img](01.png)  
+1. Пишу и применяю [Deployment](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/1/deploy.yml) приложения  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/PNG/01.png)  
 как мы видим контейнер стоит в статусе **ContainerCreating** т.к. используется один и тот же порт, а **configmap** ещё не написан.  
-2. Пишу и применяю [configmap]()  
-![markdown img](02.png)  
+2. Пишу и применяю [configmap](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/1/configmap.yml)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/PNG/02.png)  
 Оба контейнера в статусе **running**, что говорит о том что конфликт портов решён с помощью **configmap**  
-3. Пишу и применяю [service]()  
+3. Пишу и применяю [service](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/1/srv.yml)  
 4. с помощью команды проверяю вывод **curl** 
-![markdown img](03.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/PNG/03.png) 
   
 ------
   
 ### Решение 2. 
   
-1. Пишу [Deployment]() с Nginx  
-2. Прописываю [configmap]() c index.html  
+1. Пишу [Deployment](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/2/deploy.yml) с Nginx  
+2. Прописываю [configmap](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/2/configmap.yml) c index.html  
 3. Пишу сертифекат SSL  
-![markdown img](04.png) 
-4. создаю Sercret для использования сертификата
-![markdown img](05.png) 
-5. Создаю [Ingress] и необходимый [Service], подключаю к нему SSL.  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/PNG/04.png) 
+4. создаю [Sercret](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/2/service.yml) для использования сертификата
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/PNG/05.png) 
+5. Создаю [Ingress](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/2/ingress.yml) и необходимый [Service](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/2/service.yml), подключаю к нему SSL.  
 6. проверяю доступ командой **openssl s_client -connect myingress.com:443**
-![markdown img](06.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/08/PNG/06.png) 
 
 ------
