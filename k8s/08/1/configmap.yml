@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: multitool-maps
+  namespace: hw8
+data:
+  HTTP_PORT: '1180'
+  index.html: |
+    <html>
+    <h1>Welcome</h1>
+    </br>
+    <h1>Hi! This is a configmap Index file </h1>
+    </html>

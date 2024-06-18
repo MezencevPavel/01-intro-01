@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: hw8
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-frontend
+  ports:
+  - name: http
+    protocol: TCP
+    port: 443
+    targetPort: 80

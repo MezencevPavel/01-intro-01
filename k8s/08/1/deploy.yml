@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-multitool
+  namespace: hw8
+spec:
+  selector:
+    matchLabels:
+      app: nmt
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nmt
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.4
+        ports:
+        - containerPort: 80
+        volumeMounts:
+            - name: nginx-index-file
+              mountPath: /usr/share/nginx/html/
+      - name: multitool
+        image: dockerhub.timeweb.cloud/wbitt/network-multitool
+        ports:
+        - containerPort: 8080
+        env:
+          - name: HTTP_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: multitool-maps
+                key: HTTP_PORT
+      volumes:
+      - name: nginx-index-file
+        configMap:
+          name: multitool-maps

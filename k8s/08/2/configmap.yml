@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-maps
+  namespace: hw8
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <h1>This is a modified test page!</h1>
+    </body>
+    </html>
