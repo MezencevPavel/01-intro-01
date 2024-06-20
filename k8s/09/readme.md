@@ -35,7 +35,7 @@
 ### Решение 1. Создайте конфигурацию для подключения пользователя
 
 1. создаю ключ OpenSSL  
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/09/png/01.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/09/png/01.png)  
 Создаю запрос на подписание сертификата  
 ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/09/png/02.png)  
 Генерирую файл сертификата  
