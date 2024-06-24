@@ -38,14 +38,14 @@
 ### Решение 1. Подготовить Helm-чарт для приложения
 
 1. устанавливаю **Helm**  
-![markdown img](01.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/01.png)  
 2. создаю helm nginx командой **helm create nginx**  
-![markdown img](02.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/02.png)  
 3. вывод REVISION 1  
-![markdown img](03.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/03.png)  
 4. вывод REVISION 2  
-![markdown img](04.png) 
-![markdown img](05.png)   
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/04.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/05.png)   
 
 ------
 
@@ -53,11 +53,11 @@
 
 1. создал 2 namespace app1 & app2  
 2. nginx в ns app1
-![markdown img](06.png)  
-![markdown img](07.png)   
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/06.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/07.png)   
 3. nginx в ns app2
-![markdown img](08.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/08.png) 
 4. вывод:  
-![markdown img](09.png) 
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/10/png/09.png) 
 
 ------
