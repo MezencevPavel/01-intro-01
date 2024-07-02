@@ -64,8 +64,8 @@ sudo cp /etc/kubernetes/admin.conf ~/.kube/config
 sudo chown $(id -u):$(id -g) ~/.kube/config
 ```
 **Создал 5 ВМ**  
-![markdown img](01.png)  
-![markdown img](02.png)  
-![markdown img](03.png)  
-![markdown img](04.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/12/png/01.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/12/png/02.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/12/png/03.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/k8s/12/png/04.png)  
 
