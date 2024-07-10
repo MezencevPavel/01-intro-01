@@ -14,26 +14,26 @@
 
 
 1. Создать пустую VPC. Выбрать зону.
-[providers.tf](.tf)  
+[providers.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/providers.tf)  
 2. Публичная подсеть.
-[vpc.tf](vpc.tf)  
-[nat.tf](nat.tf)  
-[public-vm.tf](public-vm.tf)  
+[vpc.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/vpc.tf)  
+[nat.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/nat.tf)  
+[public-vm.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/public-vm.tf)  
  - Создать в VPC subnet с названием public, сетью 192.168.10.0/24.
  - Создать в этой подсети NAT-инстанс, присвоив ему адрес 192.168.10.254. В качестве image_id использовать fd80mrhj8fl2oe87o4e1.
  - Создать в этой публичной подсети виртуалку с публичным IP, подключиться к ней и убедиться, что есть доступ к интернету.
-![markdown img](11.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/png/11.png)  
 3. Приватная подсеть.
-[route-table.tf](route-table.tf)  
-[private-vm.tf](private-vm.tf)  
-[outputs.tf](outputs.tf)
+[route-table.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/route-table.tf)  
+[private-vm.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/private-vm.tf)  
+[outputs.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/source/outputs.tf)
  - Создать в VPC subnet с названием private, сетью 192.168.20.0/24.
  - Создать route table. Добавить статический маршрут, направляющий весь исходящий трафик private сети в NAT-инстанс.
  - Создать в этой приватной подсети виртуалку с внутренним IP, подключиться к ней через виртуалку, созданную ранее, и убедиться, что есть доступ к интернету.
- ![markdown img](12.png)  
+ ![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/png/12.png)  
   
-![markdown img](01.png)  
-![markdown img](02.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/png/01.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/01/png/02.png)  
 ---
 
 
