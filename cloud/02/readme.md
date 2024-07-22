@@ -19,7 +19,7 @@
  - Сделать файл доступным из интернета.
 
 [s3_bucket](https://github.com/MezencevPavel/devops-netology/tree/main/cloud/02/01_bucket)  
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/png/01.jpg)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/png/01.png)  
  
 2. Создать группу ВМ в public подсети фиксированного размера с шаблоном LAMP и веб-страницей, содержащей ссылку на картинку из бакета:
 
@@ -29,7 +29,7 @@
  - Настроить проверку состояния ВМ.
  
  [02_LAMP](https://github.com/MezencevPavel/devops-netology/tree/main/cloud/02/02_LAMP_balance)  
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/png/02.jpg)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/png/02.png)  
 
 3. Подключить группу к сетевому балансировщику:
 
@@ -37,4 +37,4 @@
  - Проверить работоспособность, удалив одну или несколько ВМ.
 
 [balance.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/02_LAMP_balance/balance.tf)  
-![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/png/03.jpg)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/02/png/03.png)  
