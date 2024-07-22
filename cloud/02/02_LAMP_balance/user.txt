@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Update package lists for upgrades and new package installations
+sudo apt update
+
+# Install Apache, PHP, and PHP-MySQL
+sudo apt install -y apache2 php php-mysql
+
+# Enable Apache service to start automatically at boot time
+sudo systemctl enable apache2
+
+# Start Apache service
+sudo systemctl start apache2
+
+# Get the external IP address of the virtual machine
+external_ip=$(curl -s ifconfig.me)
+
+# Create a new index.html file with the specified content
+cat <<EOF | sudo tee /var/www/html/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAMP Stack</title>
+</head>
+<body>
+    <h1>Welcome to LAMP Stack!</h1>
+    <p>Created wineperm on Yandex Cloud Storage.</p>
+    <p>External IP address of this virtual machine: $external_ip</p>
+    <img src="https://storage.yandexcloud.net/pavel2/image.jpeg" alt="Wine Picture">
+</body>
+</html>
+EOF
