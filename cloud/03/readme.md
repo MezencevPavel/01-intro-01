@@ -12,6 +12,8 @@
 
 ## Решение 2. 
 
-[kms_bucket.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/03/kms_bucket.tf)
-[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/03/png/01.png)  
-[markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/03/png/02.png)  
+ Создан ключ и зашифрована картина **image** в с бакете  
+
+[kms_bucket.tf](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/03/kms_bucket.tf)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/03/png/01.png)  
+![markdown img](https://github.com/MezencevPavel/devops-netology/blob/main/cloud/03/png/02.png)  
