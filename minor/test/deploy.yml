@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-web-app
+  labels:
+    app: my-web-app
+spec:
+  replicas: 4 # Начальное количество реплик для обработки пиковой нагрузки
+  selector:
+    matchLabels:
+      app: my-web-app
+  template:
+    metadata:
+      labels:
+        app: my-web-app
+    spec:
+      containers:
+      - name: my-web-app
+        image: my-web-app-image:latest # Замените на ваш образ
+        resources:
+          requests:
+            memory: "128Mi" # Минимальное потребление памяти
+            cpu: "100m" # Минимальное потребление CPU
+          limits:
+            memory: "256Mi" # Лимит памяти для обработки пиковых нагрузок
+            cpu: "500m" # Лимит CPU для обработки пиковых нагрузок
+        readinessProbe:
+          httpGet:
+            path: /healthz # Замените на ваш путь для проверки готовности
+            port: 80
+          initialDelaySeconds: 10 # Задержка перед первой проверкой готовности
+          periodSeconds: 5 # Периодичность проверок готовности
+        livenessProbe:
+          httpGet:
+            path: /healthz # Замените на ваш путь для проверки живучести
+            port: 80
+          initialDelaySeconds: 10 # Задержка перед первой проверкой живучести
+          periodSeconds: 5 # Периодичность проверок живучести
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - my-web-app
+            topologyKey: "kubernetes.io/hostname" # Распределение подов по разным нодам для отказоустойчивости
