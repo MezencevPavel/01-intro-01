@@ -28,7 +28,7 @@
 1. Для мультизональности мы будем использовать механизм **podAntiAffinity**. podAntiAffinity  позволяет управлять распределением подов по нодам кластера. Он используется для предотвращения размещения подов с одинаковыми метками на одной и той же ноде или в одной и той же зоне доступности. Это помогает повысить отказоустойчивость и устойчивость приложения к сбоям.  
   
 ```markdown
- affinity:
+    affinity:
         podAntiAffinity: 
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
@@ -80,20 +80,20 @@ spec:
 5. в [HorizontalPodAutoscaler](https://github.com/MezencevPavel/devops-netology/blob/main/minor/test/HApid.yml) мы указали что минимальное количество реплик, для работы ночью и максимальное, для пиковых нагрузок днём.  
 Так же мы указали метрику, на основе которой будет происходить масштабирование. В данном случае используется метрика использования CPU с целевым значением 50%  
 ```markdown
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: my-web-app
-  minReplicas: 2 # Минимальное количество реплик для ночного времени
-  maxReplicas: 8 # Максимальное количество реплик для пиковой нагрузки
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 50 # Целевое использование CPU для масштабирования
+  spec:
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: my-web-app
+    minReplicas: 2 # Минимальное количество реплик для ночного времени
+    maxReplicas: 8 # Максимальное количество реплик для пиковой нагрузки
+    metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50 # Целевое использование CPU для масштабирования
 ```
   6. Для максимальной отказоустойчевости мы использовали:  
   **readinessProbe** -  позволяет Kubernetes определить, готов ли под принимать трафик.    
